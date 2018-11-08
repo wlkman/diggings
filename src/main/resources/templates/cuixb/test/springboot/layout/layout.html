@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>lay out</title>
+        <link rel="stylesheet" type="text/css" href="plugins/bootstrap/css/bootstrap.min.css"
+              th:href="@{plugins/bootstrap/css/bootstrap.min.css}"/>
+    </head>
+    <body>
+        <div th:replace="/cuixb/test/springboot/layout/header :: header"></div>
+        <div class="container">
+            <div layout:fragment="content"></div>
+        </div>
+        <div th:replace="/cuixb/test/springboot/layout/footer :: footer">&copy; 2014 The Static Templates</div>
+    </body>
+
+</html>

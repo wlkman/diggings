@@ -15,4 +15,9 @@ public class LoginController {
 		return "cuixb/test/springboot/login/login";
 	}
 
+//	@GetMapping("/testLayout")
+//	public String testLayout(Map<String, Object> model) {
+//		return "cuixb/test/springboot/layout/layout";
+//	}
+
 }

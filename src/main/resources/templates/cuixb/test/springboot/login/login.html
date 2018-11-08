@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{/cuixb/test/springboot/layout/layout}">
 <head>
-    <link rel="stylesheet" type="text/css" href="plugins/bootstrap/css/bootstrap.min.css" th:href="@{plugins/bootstrap/css/bootstrap.min.css}" />
 </head>
 <body>
-<div class="alert alert-primary" role="alert">
-    spring security custom login page
+<div layout:fragment="content">
+    <div class="alert alert-primary" role="alert">
+        spring security custom login page
+    </div>
+    <form th:action="@{/login}" method="post">
+        <div th:if="${param.error != null}">
+            <p>
+                Invalid username and password.
+            </p>
+        </div>
+        <div th:if="${param.logout != null}">
+            <p>
+                You have been logged out.
+            </p>
+        </div>
+        <p>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username"/>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"/>
+        </p>
+        <input type="hidden"
+               name="${_csrf.parameterName}"
+               value="${_csrf.token}"/>
+        <button type="submit" class="btn">Log in</button>
+    </form>
 </div>
-<form th:action="@{/login}" method="post">
-    <div th:if="${param.error != null}">
-        <p>
-            Invalid username and password.
-        </p>
-    </div>
-    <div th:if="${param.logout != null}">
-        <p>
-            You have been logged out.
-        </p>
-    </div>
-    <p>
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username"/>
-    </p>
-    <p>
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password"/>
-    </p>
-    <input type="hidden"
-           name="${_csrf.parameterName}"
-           value="${_csrf.token}"/>
-    <button type="submit" class="btn">Log in</button>
-</form>
 </body>
 </html>
