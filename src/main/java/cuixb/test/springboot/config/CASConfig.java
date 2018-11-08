@@ -1,4 +1,4 @@
-package cuixb.test.springboot.login.config;
+package cuixb.test.springboot.config;
 
 import org.springframework.context.annotation.Configuration;
 
