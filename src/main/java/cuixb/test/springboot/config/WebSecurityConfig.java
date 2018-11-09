@@ -15,7 +15,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements W
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                    .antMatchers("/api/**","/plugins/**").permitAll()
+                    .antMatchers("/api/**","/plugins/**","/cuixb/**/*.js","/cuixb/**/*.css", "/static/textures/**").permitAll()
                     .anyRequest().authenticated()
                 .and()
                     .formLogin()

@@ -26,7 +26,7 @@ public class HomeController {
 		model.put("welcome","welcome to home page:" +welcome);
 		model.put("content_en_US",content_en_US);
 		model.put("content_zh_CN",content_zh_CN);
-		return "cuixb/test/springboot/login/home";
+		return "cuixb/login/home";
 	}
 
 }

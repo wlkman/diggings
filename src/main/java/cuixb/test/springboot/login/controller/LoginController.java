@@ -12,7 +12,7 @@ public class LoginController {
 
 	@GetMapping("/login")
 	public String list(Map<String, Object> model) {
-		return "cuixb/test/springboot/login/login";
+		return "cuixb/login/login";
 	}
 
 //	@GetMapping("/testLayout")

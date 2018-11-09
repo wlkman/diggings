@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{/cuixb/test/springboot/layout/layout}">
+<body>
+<div layout:fragment="content">
+    <h1 th:text="${welcome}"></h1>
+    <h2 th:text="${content_en_US}"></h2>
+    <h2 th:text="${content_zh_CN}"></h2>
+    <form th:action="@{/logout}" method="post">
+        <button type="submit" class="btn">Log out</button>
+    </form>
+</div>
+</body>
+</html>
