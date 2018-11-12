@@ -3,7 +3,7 @@
 <head>
     <title>three.js webgl - cloth simulation</title>
     <meta charset="utf-8">
-    <!--<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <style>
 			body {
 				font-family: Monospace;
@@ -133,7 +133,7 @@
 				// cloth material
 
 				var loader = new THREE.TextureLoader();
-				var clothTexture = loader.load( 'textures/patterns/circuit_pattern.png' );
+				var clothTexture = loader.load( 'threejs/textures/patterns/circuit_pattern.png' );
 				clothTexture.anisotropy = 16;
 
 				var clothMaterial = new THREE.MeshLambertMaterial( {
@@ -173,7 +173,7 @@
 
 				// ground
 
-				var groundTexture = loader.load( 'textures/terrain/grasslight-big.jpg' );
+				var groundTexture = loader.load( 'threejs/textures/terrain/grasslight-big.jpg' );
 				groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
 				groundTexture.repeat.set( 25, 25 );
 				groundTexture.anisotropy = 16;

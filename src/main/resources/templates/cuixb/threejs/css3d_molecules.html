@@ -163,12 +163,12 @@
 
 				baseSprite.onload = function () {
 
-					loadMolecule( "models/molecules/caffeine.pdb" );
+					loadMolecule( "threejs/models/molecules/caffeine.pdb" );
 					createMenu();
 
 				};
 
-				baseSprite.src = 'textures/sprites/ball.png';
+				baseSprite.src = 'threejs/textures/sprites/ball.png';
 
 				//
 
@@ -196,7 +196,7 @@
 					button.innerHTML = m;
 					menu.appendChild( button );
 
-					var url = "models/molecules/" + MOLECULES[ m ];
+					var url = "threejs/models/molecules/" + MOLECULES[ m ];
 
 					button.addEventListener( 'click', generateButtonCallback( url ), false );
 
