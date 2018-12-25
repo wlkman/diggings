@@ -6,11 +6,11 @@
         <link rel="stylesheet" type="text/css" href="cuixb/common/layout.css" th:href="@{cuixb/common/layout.css}"/>
     </head>
     <body>
-        <div th:replace="/cuixb/layout/header :: header"></div>
+        <div th:replace="cuixb/layout/header :: header"></div>
         <div class="container">
             <div layout:fragment="content"></div>
         </div>
-        <div th:replace="/cuixb/layout/footer :: footer">&copy; 2014 The Static Templates</div>
+        <div th:replace="cuixb/layout/footer :: footer">&copy; 2014 The Static Templates</div>
     </body>
 
     <script type="text/javascript" src="plugins/jquery/jquery-3.3.1.min.js" th:src="@{plugins/jquery/jquery-3.3.1.min.js}"></script>
